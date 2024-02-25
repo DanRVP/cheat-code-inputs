@@ -31,7 +31,6 @@ class CheatCodes {
 
         let match = false;
         let code_map = valid_codes[0] == undefined ? this.possible_codes : this.valid_codes;
-        this.valid_codes = [];
 
         for (let i = 0; i < code_map.length; i++) {
               if (key_code == code_map[i]['code'][code_key]) {
