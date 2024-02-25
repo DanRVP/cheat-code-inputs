@@ -1,5 +1,5 @@
 {
-  "name": "js-cheat-code-inputs",
+  "name": "@danrogers/cheat-code-inputs",
   "version": "1.0.0",
   "description": "Enter cheat codes using key inputs like in classic video games. e.g Up Up Down Down Left Right Left Right B A.",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanRVP/js-cheat-code-inputs.git"
+    "url": "git+https://github.com/DanRVP/cheat-code-inputs.git"
   },
   "author": "Dan Rogers",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/DanRVP/js-cheat-code-inputs/issues"
+    "url": "https://github.com/DanRVP/cheat-code-inputs/issues"
   },
-  "homepage": "https://github.com/DanRVP/js-cheat-code-inputs#readme"
+  "homepage": "https://github.com/DanRVP/cheat-code-inputs#readme"
 }
