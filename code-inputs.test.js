@@ -4,7 +4,7 @@ const KeyCodes = require('./index.js').KeyCodes;
 
 test('Test single cheat code in collection (valid)', () => {
     let res = 0;
-    codes = new CheatCodes([new CheatCode([KeyCodes.ARROWUP, KeyCodes.ARROWDOWN], () => res = 1, 1)]);
+    const codes = new CheatCodes([new CheatCode([KeyCodes.ARROWUP, KeyCodes.ARROWDOWN], () => res = 1, 1)]);
     [KeyCodes.ARROWUP, KeyCodes.ARROWDOWN].forEach(key_code => codes.checkKeyPress(key_code));
 
     expect(res).toBe(1);
@@ -14,7 +14,7 @@ test('Test single cheat code in collection (valid)', () => {
 
 test('Test single cheat code in collection (invalid)', () => {
     let res = 0;
-    codes = new CheatCodes([new CheatCode([KeyCodes.ARROWUP, KeyCodes.ARROWDOWN], () => res = 1, 1)]);
+    const codes = new CheatCodes([new CheatCode([KeyCodes.ARROWUP, KeyCodes.ARROWDOWN], () => res = 1, 1)]);
     [KeyCodes.ARROWUP, KeyCodes.ARROWUP].forEach(key_code => codes.checkKeyPress(key_code));
 
     expect(res).toBe(0);
@@ -24,7 +24,7 @@ test('Test single cheat code in collection (invalid)', () => {
 
 test('Test multiple cheat codes in collection (1 valid)', () => {
     let res = 0;
-    codes = new CheatCodes([
+    const codes = new CheatCodes([
         new CheatCode([KeyCodes.ARROWUP, KeyCodes.ARROWUP], () => res = 1, 1),
         new CheatCode([KeyCodes.ARROWUP, KeyCodes.ARROWDOWN], () => res = 2, 2),
     ]);
@@ -38,7 +38,7 @@ test('Test multiple cheat codes in collection (1 valid)', () => {
 
 test('Test multiple cheat codes in collection (all valid/duplicates)', () => {
     let res = 0;
-    codes = new CheatCodes([
+    const codes = new CheatCodes([
         new CheatCode([KeyCodes.ARROWUP, KeyCodes.ARROWDOWN], () => res = 1, 1),
         new CheatCode([KeyCodes.ARROWUP, KeyCodes.ARROWDOWN], () => res = 2, 2),
     ]);
@@ -52,7 +52,7 @@ test('Test multiple cheat codes in collection (all valid/duplicates)', () => {
 
 test('Test multiple cheat codes in collection (invalid)', () => {
     let res = 0;
-    codes = new CheatCodes([
+    const codes = new CheatCodes([
         new CheatCode([KeyCodes.ARROWDOWN, KeyCodes.ARROWDOWN], () => res = 1, 1),
         new CheatCode([KeyCodes.ARROWDOWN, KeyCodes.ARROWDOWN], () => res = 2, 2),
     ]);
@@ -66,7 +66,7 @@ test('Test multiple cheat codes in collection (invalid)', () => {
 
 test('Test multiple cheat codes in collection (second key press of first code is match)', () => {
     let res = 0;
-    codes = new CheatCodes([
+    const codes = new CheatCodes([
         new CheatCode([KeyCodes.ARROWDOWN, KeyCodes.ARROWDOWN], () => res = 1, 1),
         new CheatCode([KeyCodes.ARROWLEFT, KeyCodes.ARROWUP], () => res = 2, 2),
     ]);
@@ -79,7 +79,7 @@ test('Test multiple cheat codes in collection (second key press of first code is
 });
 
 test('Test removing code from codes collection (key exists)', () => {
-    codes = new CheatCodes([
+    const codes = new CheatCodes([
         new CheatCode([KeyCodes.ARROWDOWN, KeyCodes.ARROWDOWN], () => res = 1, 1),
         new CheatCode([KeyCodes.ARROWLEFT, KeyCodes.ARROWUP], () => res = 2, 2),
     ]);
@@ -89,7 +89,7 @@ test('Test removing code from codes collection (key exists)', () => {
 });
 
 test('Test removing codes with same ID from codes collection', () => {
-    codes = new CheatCodes([
+    const codes = new CheatCodes([
         new CheatCode([KeyCodes.ARROWDOWN, KeyCodes.ARROWDOWN], () => res = 1, 1),
         new CheatCode([KeyCodes.ARROWLEFT, KeyCodes.ARROWUP], () => res = 2, 1),
     ]);
@@ -99,7 +99,7 @@ test('Test removing codes with same ID from codes collection', () => {
 });
 
 test('Test adding code to collection', () => {
-    codes = new CheatCodes([
+    const codes = new CheatCodes([
         new CheatCode([KeyCodes.ARROWDOWN, KeyCodes.ARROWDOWN], () => res = 1, 1),
     ]);
 
