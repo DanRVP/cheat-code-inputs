@@ -1,10 +1,9 @@
 {
   "name": "@danrogers/cheat-code-inputs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Enter cheat codes using key inputs like in classic video games. e.g Up Up Down Down Left Right Left Right B A.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +15,8 @@
     "url": "https://github.com/DanRVP/cheat-code-inputs/issues"
   },
   "homepage": "https://github.com/DanRVP/cheat-code-inputs#readme",
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }

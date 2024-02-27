@@ -30,16 +30,17 @@ class CheatCodes {
         }
 
         let match = false;
-        let code_map = valid_codes[0] == undefined ? this.possible_codes : this.valid_codes;
+        let code_map = this.valid_codes[0] == undefined ? this.possible_codes : this.valid_codes;
 
         for (let i = 0; i < code_map.length; i++) {
-              if (key_code == code_map[i]['code'][code_key]) {
+            if (key_code == code_map[i]['code'][this.code_key]) {
                 match = true;
-                if (code_key + 1 == code_map[i]['code'].length) {
+                if (this.code_key + 1 == code_map[i]['code'].length) {
                     code_map[i]['func']();
                     match = false;
+                    break; // Break to prevent duuplicates running twice
                 } else {
-                    valid_codes.push(code_map[i]);
+                    this.valid_codes.push(code_map[i]);
                 }
             }
         }
